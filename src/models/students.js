@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
-
+//Schema of Collection
 const studentSchema = new mongoose.Schema({
     name : {
         type:String,
@@ -29,6 +29,7 @@ const studentSchema = new mongoose.Schema({
     }
 
 })
-
-const Student = new mongoose.model("Student",studentSchema);
+//Creating Model i.e Collection 
+const Student = new mongoose.model("Student",studentSchema);//Name of Collection is saved in Plural in database
+//exporting the model to create access to routes,application
 module.exports = Student;
